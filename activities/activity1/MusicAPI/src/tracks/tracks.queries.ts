@@ -1,15 +1,8 @@
 export const trackQueries = {
-    createTrack: `
-    INSERT INTO tracks (album_id, title, number, video_url) VALUES(?,?,?,?)
-    `,
-    getTracks: `
-    SELECT title AS title, video_url AS video, lyrics AS lyrics
-    FROM music.tracks
-    WHERE album_id = ?
-    `,
-    updateTrack: `
-    UPDATE music.tracks
-    SET title = ?, number = ?, video_url = ?, lyrics = ?
-    WHERE id = ?
-    `
+    createTrack:
+        `insert into tracks (album_id, title, number, video_url) VALUES(?,?,?,?)`,
+    readTracks:
+        `select title as title, video_url as video, lyrics as lyrics from music.tracks where album_id = ?`,
+    updateTrack:
+        `update music.tracks set title =?, number = ?, video_url = ?, lyrics = ? where id = ?;`
 }

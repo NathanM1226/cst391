@@ -1,48 +1,22 @@
 export const albumQueries = {
-    getAlbums: `
-    SELECT
-        id AS albumId, title AS title, artist AS artist,
-        description AS description, year AS year, image AS image
-    FROM music.albums
-    `,
-    getAlbumsByArtist: `
-    SELECT 
-        id AS albumId, title AS title, artist AS artist,
-            description AS description, year AS year, image AS image
-    FROM music.albums
-    WHERE music.albums.artist = ?
-    `,
-    getAlbumsByArtistSearch: `
-    SELECT
-        id AS albumId, title AS title, artist AS artist,
-            description AS description, year AS year, image AS image
-    FROM music.albums
-    WHERE music.albums.artist LIKE ?
-    `,
-    getAlbumsByDescriptionSearch: `
-    SELECT
-        id AS albumId, title AS title, artist AS artist,
-            description AS description, year AS year, image AS image
-    FROM music.albums
-    WHERE music.albums.description LIKE ?
-    `,
-    getAlbumsByAlbumId: `
-    SELECT
-        id AS albumId, title AS title, artist AS artist,
-            description AS description, year AS year, image AS image
-    FROM music.albums
-    WHERE music.albums.id = ?
-    `,
-    createAlbum: `
-    INSERT INTO ALBUMS(title, artist, description, year, image) VALUES(?,?,?,?,?)
-    `,
-    updateAlbum: `
-    UPDATE music.albums
-    SET title = ?, artist = ?, description = ?, year = ?, image = ?
-    WHERE id = ?
-    `,
-    deleteAlbum: `
-    DELETE FROM music.albums
-    WHERE id = ?
-    `,
+	readAlbums:
+		`select id as albumId, title as title, artist as artist, description as description, year as year, image as image from music.albums`,
+	readAlbumsByArtist:
+		`select id as albumId, title as title, artist as artist, description as description, year as year, image as image from music.albums
+	   where music.albums.artist = ?`,
+	readAlbumsByArtistSearch:
+		`select id as albumId, title as title, artist as artist, description as description, year as year, image as image from music.albums
+	   where music.albums.artist like ?`,
+	readAlbumsByDescriptionSearch:
+		`select id as albumId, title as title, artist as artist, description as description, year as year, image as image from music.albums
+	   where music.albums.description like ?`,
+	readAlbumsByAlbumId:
+		`select id as albumId, title as title, artist as artist, description as description, year as year, image as image from music.albums
+	   where music.albums.id = ?`,
+	createAlbum:
+		`insert into albums(title, artist, description, year, image) values(?,?,?,?,?)`,
+	updateAlbum:
+		`update music.albums set title=?, artist=?, year=?, image=?, description=? where id = ?`,
+	deleteAlbum:
+		`delete from music.albums where id = ?`,
 }

@@ -1,12 +1,9 @@
-// Importing the router from the express package
-import { Request, Response, Router } from "express";
-// Importing the getArtists from  the controller file
-import * as ArtistsController from "./artists.controller";
-
+import { Request, Response, Router } from 'express';
+import * as ArtistsController from './artists.controllers';
 
 const router = Router();
-router 
+router
     .route('/artists')
-    .get(ArtistsController.getArtists);
+    .get(ArtistsController.readArtists);
 
 export default router;

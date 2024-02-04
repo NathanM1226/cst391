@@ -5,7 +5,7 @@ Nathan, as you continue to use Markdown your pages will start incorporating othe
 ## How I addressed the feedback
 I read the feedback and was happy with my work :)
 
-# Milestone 1
+# Milestone 2
 - CST-391
 - Milestone Project Proposal
 - Nathan McMahon
