@@ -41,3 +41,11 @@ I will be creating a website to list cars. The site will allow an admin-user to 
 
  #### Unknowns and Risks
  The unknowns and risks are that I have never done this type of application in javascript, only java and c#. I am not sure how the technicalities will change using a different language.
+
+ ## Rest API
+ My rest api is gonna be a simple product API that uses
+
+ - GET
+ - POST
+ - PUT
+ - DELETE
