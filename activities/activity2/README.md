@@ -1,7 +1,7 @@
 # CST391
 
-## Activity 1
-- This is my activity 1
+## Activity 2
+- This is my activity 2
 - CST-391
      - JavaScript Web Application Development
      - Angular Tools & First App
