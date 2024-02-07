@@ -4,7 +4,7 @@
 - This is my activity 1
 - CST-391
      - JavaScript Web Application Development
-     - Milestone Proposal
+     - Activity 1
      - Nathan McMahon
 
 ## Postman Video Link
