@@ -29,3 +29,13 @@ After Name
 3. `[(ngModel)]` is a two-way data binding syntax in Angular used primarily with form controls. It combines property binding (`[()]`) and event binding `()` to establish a bidirectional connection between the view (template) and the component class. In the context of `info.component.html`, if applied to an input element like `<input [(ngModel)]="infoData">`, it implies that changes to the input field will update the `infoData` property in the component class, and vice versa. The `ngModel` directive requires importing the `FormsModule` in the corresponding module to enable its usage. This two-way binding simplifies the synchronization of user input and component data, enhancing the interactive nature of the application's forms.
 
 ## Part 2
+
+### Screenshots
+Here is the initial page of the app
+![initialPage](initialPage.png)
+
+Here is the gcu home page that I can get to from the navbar
+![gcuHomePage](gcuHomePage.png)
+
+Here is the about box with the version number
+![aboutBox](aboutBox.png)
