@@ -1,0 +1,63 @@
+<!--  https://www.youtube.com/watch?v=KOzLFoBxo5Y -->
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mustache Example</title>
+</head>
+
+
+
+<body>
+    <!--  sets up the form, with an input text field called name and a submit button -->
+	<form id="form">
+		<input type="text" name="name" id="name" required> 
+		<input type="submit" value="Change Name">
+	</form>
+	
+	<!--  text line on webpage -->
+	<div id="target">Loading...</div>
+
+    <!-- utilizing mustache template type which is x-tmpl-mustache -->
+    <!-- Print out the Mustache Example along with the variable value of name, e.g. {{name}} -->
+	<script type="x-tmpl-mustache" id="template">
+		Mustache Example {{name}}
+	</script>
+
+</body>
+
+<!-- get the latest version of mustache from the unpkg.com website -->
+<!-- other websites are also available as follows: -->
+<!-- <script src="https://github.com/janl/mustache.js/blob/master/mustache.js"></script> -->
+<!-- <script src="https://github.com/janl/mustache.js/raw/master/mustache.js"></script> -->
+<!-- <script src="https://raw.github.com/janl/mustache.js/master/mustache.js"></script> -->
+<!-- <script src=""https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.2.0/mustache.min.js"></script>-->
+<script src="https://unpkg.com/mustache@latest"></script>
+
+<script>
+    // declare the form object element, note line 13 the form id <form id="form"
+	let form = document.getElementById('form');
+    
+    // adding an event listener, once the submit button is pressed then call the changeName function, line 46
+	form.addEventListener('submit', changeName);
+
+    // changeName function
+	function changeName(e) {
+		e.preventDefault();
+		
+		// get the name object of the name element id, line 14
+		var name = document.getElementById('name').value;
+
+		// get the template object line 23
+		let template = document.getElementById('template').innerHTML;
+
+		// then map both the template and name attribute
+		let rendered = Mustache.render(template, {
+			name : document.getElementById("name").value,
+		});
+
+		// render the combined template and attribute
+		document.getElementById('target').innerHTML = rendered;
+	}
+</script>
+</html>
