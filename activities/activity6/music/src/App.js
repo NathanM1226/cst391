@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Card from "./Card";
 import "./App.css";
-// import albums from './albums.json';
-import SearchForm from "./SearchForm";
 import dataSource from "./dataSource";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import SearchAlbum from "./SearchAlbum";
@@ -52,7 +49,7 @@ const App = (props) => {
       return false;
   });
 
-  // console.log('renderedList', renderedList);
+  console.log('renderedList', renderedList);
 
   return (
     <BrowserRouter>
