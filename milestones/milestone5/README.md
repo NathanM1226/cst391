@@ -6,5 +6,12 @@
      - React Front End
      - Nathan McMahon
 
-## ScreenShots
-Didn't have any screenshots because of the issue we talked about
+### ScreenShots
+Home Page
+![Home](homePage.png)
+
+Add button
+![Add](createPage.png)
+
+Created New Album
+![new](createdNewAlbum.png)
